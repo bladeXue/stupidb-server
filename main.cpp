@@ -1,43 +1,21 @@
 #include <iostream>
-#include <vector>
-#include <set>
-
-class Person {
-public:
-    Person() {}
-
-    Person(std::string name) {
-        this->name = name;
-    }
-
-    std::string GetName() {
-        return this->name;
-    }
-
-private:
-    std::string name;
-};
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
 
-    std::string s1{"str1"};
-    std::cout << s1 << std::endl;
-    std::string s2 = {"str2"};
-    std::cout << s2 << std::endl;
-    auto *s3 = new std::string{"str3"};
-    std::cout << *s3 << std::endl;
+    char c = 'm';
+    char *s = "programming";
 
-
-    Person person("man");
-    std::cout << person.GetName() << std::endl;
-    Person person1 = {"DSB"};
-    std::cout << person1.GetName() << std::endl;
-
-    std::vector<int> vec;
-    vec = { 1, 2, 3, 4, 8, 9, 3, 2, 1, 0, 4, 8 };
-    std::set<int> st(vec.begin(), vec.end());
-    std::cout << "fuck you!!!" << std::endl;
-
+    int _index = -1;
+    for (int i = 0;; ++i) {
+        if (s[i] == '\0')
+            break;
+        if (s[i] == c)
+            _index = i;
+    }
+    if (_index == -1) {
+        printf("Not Found");
+    } else {
+        printf("index = %d", _index);
+    }
     return 0;
 }
