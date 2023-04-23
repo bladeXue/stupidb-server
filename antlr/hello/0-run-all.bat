@@ -1,3 +1,5 @@
+@REM integration version
+
 @REM delete generated files first
 del src /Q
 
