@@ -9,13 +9,11 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-
         ANTLRInputStream in = new ANTLRInputStream(System.in);
         ArrayInitLexer lexer = new ArrayInitLexer(in);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         ArrayInitParser parser = new ArrayInitParser(tokens);
         ParseTree tree = parser.init();
         System.out.println(tree.toStringTree(parser));
-
     }
 }
